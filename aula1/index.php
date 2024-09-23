@@ -1,67 +1,56 @@
 <?php
 
-$nome = readline('Entre com o seu nome: ');
+$mensagem = 'Olá, mundo!';
 
-echo 'Olá ' . $nome;
-// 1. Exibir conteúdo: echo e print
-// Ambos são usados para exibir conteúdo na tela, mas 'echo' é levemente mais rápido.
+echo $mensagem;
 
-echo "<h2>Exemplo de Echo</h2>";
-print "<p>Exemplo de Print</p>";
+echo '<h2> Olá, mundo! </h2>';
 
-// 2. Variáveis
-// Em PHP, as variáveis começam com o símbolo $.
+$primeiro_nome = 'Ícaro';
+$idade = 22;
+$gosta_de_bolo = true;
 
-$nome = "João";
-$idade = 25;
+$resultado = $idade + 18 * 7;
 
-echo "<p>Nome: $nome, Idade: $idade anos</p>";
+echo $resultado;
 
-// 3. Condicionais: if, else, elseif
-// São usadas para executar blocos de código baseados em condições.
+echo '<br>';
+
+$num = 37.4;
+
+echo $num;
+
+$num2 = (int) $num;
+
+echo '<br>';
+echo $num2;
 
 $nota = 8;
 
-if ($nota >= 7) {
-    echo "<p>Passou na prova!</p>";
-} else {
-    echo "<p>Não passou na prova!</p>";
-}
+if($nota >= 7){
+    echo '<p>Passou na Prova</p>';
+}else{
+    echo '<p>Não passou na Prova</p>';   
+};
 
-// 4. Laços: for, while, foreach
-// São usados para repetir um bloco de código múltiplas vezes.
+for($i = 1; $i <= 5; $i++){
+    echo '<p> Contagem: '. $i .' </p>';
 
-echo "<h2>Laço for</h2>";
-for ($i = 1; $i < = 5; $i++) {
-    echo "<p>Contagem: $i</p>";
-}
+};
 
-echo "<h2>Laço while</h2>";
-$j = 1;
+$frutas = array('banana','laranja','sapato','tomate');
 
-while ($j <= 3) {
-    echo "<p>While: Iteração $j</p>";
-    $j++;
-}
+echo $frutas[0];
 
-// 5. Arrays
-// Arrays armazenam múltiplos valores em uma única variável.
-
-$frutas = array("Maçã", "Banana", "Laranja");
-echo "<h2>Array Simples</h2>";
-echo "<p>Fruta: " . $frutas[1] . "</p>"; // Exibe 'Banana'
-
-// 6. Funções
-// Funções permitem criar blocos de código reutilizáveis.
+echo '<br>';
 
 function saudacao($nome) {
-    return "Olá, $nome!";
-}
+    return 'Olá '. $nome;
 
-echo "<p>" . saudacao("Carlos") . "</p>";
+};
 
-// 7. Superglobais: $_GET, $_POST, $_SERVER
-// Variáveis superglobais fornecem informações sobre o ambiente e inputs do usuário.
+echo saudacao('Ícaro');
 
-echo "<h2>Superglobal \$_SERVER</h2>";
-echo "<p>O nome do arquivo atual é: " . $_SERVER['PHP_SELF'] . "</p>";
+
+
+?>
